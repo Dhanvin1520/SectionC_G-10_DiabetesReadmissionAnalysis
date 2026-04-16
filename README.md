@@ -16,7 +16,7 @@ Newton School of Technology | Data Visualization & Analytics | Capstone 2
 | Role | Name | GitHub Username |
 | :--- | :--- | :--- |
 | **Project Lead** | Dhanvin Vadlamudi | Dhanvin1520 |
-| **Data Lead** | Ayush Mittal | To be filled |
+| **Data Lead** | Ayush Mittal | mittalayushh |
 | **ETL Lead** | GARGI SRIVASTAVA | gigibyte2024 |
 | **Analysis Lead** | LAKSHYA | Lakshyalamba |
 | **Visualization Lead** | Sumit Yadav | sumit316-glitch |
