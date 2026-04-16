@@ -96,5 +96,65 @@ SectionC_G-10_DiabetesReadmissionAnalysis/
 | **Tableau Public** | Dashboard design and visualization |
 | **GitHub** | Version control and collaboration |
 
+## Evaluation Rubric
+| Area | Marks | Focus |
+| :--- | :--- | :--- |
+| **Problem Framing** | 10 | Is the business question clear and well-scoped? |
+| **Data Quality and ETL** | 15 | Is the cleaning pipeline thorough and documented? |
+| **Analysis Depth** | 25 | Are statistical methods applied correctly with insight? |
+| **Dashboard and Visualization** | 20 | Is the Tableau dashboard interactive and decision-relevant? |
+| **Business Recommendations** | 20 | Are insights actionable and well-reasoned? |
+| **Storytelling and Clarity** | 10 | Is the presentation professional and coherent? |
+| **Total** | **100** | |
+
+## Submission Checklist
+### GitHub Repository
+- [x] Public repository created with the correct naming convention (`SectionName_TeamID_ProjectName`)
+- [x] All notebooks committed in `.ipynb` format
+- [x] `data/raw/` contains the original, unedited dataset
+- [ ] `data/processed/` contains the cleaned pipeline output
+- [ ] `tableau/screenshots/` contains dashboard screenshots
+- [ ] `tableau/dashboard_links.md` contains the Tableau Public URL
+- [ ] `docs/data_dictionary.md` is complete
+- [x] `README.md` explains the project, dataset, and team
+- [x] All members have visible commits and pull requests
+
+### Tableau Dashboard
+- [ ] Published on Tableau Public and accessible via public URL
+- [ ] At least one interactive filter included
+- [ ] Dashboard directly addresses the business problem
+
+### Project Report
+- [ ] Final report exported as PDF into `reports/`
+- [ ] Cover page, executive summary, sector context, problem statement
+- [ ] Data description, cleaning methodology, KPI framework
+- [ ] EDA with written insights, statistical analysis results
+- [ ] Dashboard screenshots and explanation
+- [ ] 8-12 key insights in decision language
+- [ ] 3-5 actionable recommendations with impact estimates
+
+### Presentation Deck
+- [ ] Final presentation exported as PDF into `reports/`
+- [ ] Title slide through recommendations, impact, limitations, and next steps
+
+### Individual Assets
+- [ ] DVA-oriented resume updated to include this capstone
+- [ ] Portfolio link or project case study added
+
+## Contribution Matrix
+| Team Member | Dataset & Sourcing | ETL & Cleaning | EDA & Analysis | Statistical Analysis | Tableau Dashboard | Report Writing | PPT & Viva |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Dhanvin Vadlamudi** | Support | Support | Support | Support | Support | Owner | Owner |
+| **Ayush Mittal** | Owner | Support | Support | Support | Support | Support | Support |
+| **GARGI SRIVASTAVA** | Support | Owner | Support | Support | Support | Support | Support |
+| **tanish Garg** | Support | Support | Owner | Owner | Support | Support | Support |
+| **Sumit Yadav** | Support | Support | Support | Support | Owner | Support | Support |
+| **LAKSHYA** | Support | Support | Support | Support | Support | Support | Owner |
+
+**Declaration:** We confirm that the above contribution details are accurate and verifiable through GitHub Insights, PR history, and submitted artifacts.
+
+**Team Lead Name:** Dhanvin Vadlamudi  
+**Date:** April 16, 2026
+
 ## Academic Integrity
-We confirm that the analysis, code, and recommendations in this repository are the original work of the team listed above.
+All analysis, code, and recommendations in this repository are the original work of the team listed above. Free-riding is tracked via GitHub Insights and pull request history. Any mismatch between the contribution matrix and actual commit history may result in individual grade adjustments.
