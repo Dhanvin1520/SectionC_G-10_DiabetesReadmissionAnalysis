@@ -32,6 +32,17 @@ How can patient demographics, medication changes, and hospital treatment history
 ### Decision Supported
 This analysis enables hospital management to identify high-risk patient segments prior to discharge and implement targeted intervention strategies, such as specialized follow-up care or medication adjustments, to prevent avoidable readmissions.
 
+## Data Cleaning & ETL Methodology
+The cleaning process was designed to transform raw clinical records into a high-fidelity dataset focused on **30-day readmission prediction**. 
+
+Key steps included:
+1. **Target Variable Standardisation**: The original `readmitted` column (NO, >30, <30) was recoded into a binary `readmit_30d` target. This aligns directly with our primary KPI of reducing early hospital returns.
+2. **Clinical Missingness Handling**: Placeholders like `?` were converted to standard `NaN`. We dropped high-missingness columns (`weight`, `payer_code`, `medical_specialty`) to remove noise while retaining demographic integrity.
+3. **Age Encoding**: Transformed categorical age bins (e.g., `[50-60)`) into numerical midpoints (`55`). This allows for statistical correlation analysis between age and the probability of readmission.
+4. **Data Quality Filtering**: Removed records with `Unknown/Invalid` gender and imputed `race` as 'Other' to ensure robust demographic segmentation without losing data volume.
+
+For the full implementation, see `notebooks/02_cleaning.ipynb` or run `python scripts/etl_pipeline.py`.
+
 ## Dataset
 | Attribute | Details |
 | :--- | :--- |
