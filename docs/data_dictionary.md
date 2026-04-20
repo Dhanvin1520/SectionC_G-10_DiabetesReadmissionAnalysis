@@ -1,33 +1,48 @@
 # Data Dictionary - Diabetes Readmission Analysis
 
-This document describes the features used in the Analysis of Diabetes 130-US Hospitals Dataset.
+This document is the official metadata record for the project. It has been updated to reflect the features available after **Notebook 02: Cleaning**.
 
-## Patient Demographics
-| Column | Description | Type |
-| :--- | :--- | :--- |
-| `race` | Patient's race (Caucasian, Asian, African American, etc.) | Categorical |
-| `gender` | Patient's gender (Male, Female) | Categorical |
-| `age` | Age interval transformed to a numerical midpoint | Numerical |
+## Status: ETL & Cleaning Complete (Apr 20, 2026)
 
-## Hospital Encounter Details
-| Column | Description | Type |
-| :--- | :--- | :--- |
-| `time_in_hospital` | Number of days between admission and discharge | Numerical (Days) |
-| `num_lab_procedures` | Number of lab tests performed during encounter | Numerical |
-| `num_procedures` | Number of non-lab procedures performed | Numerical |
-| `num_medications` | Number of distinct generic medications prescribed | Numerical |
-| `number_outpatient` | Number of outpatient visits in the preceding year | Numerical |
-| `number_emergency` | Number of emergency visits in the preceding year | Numerical |
-| `number_inpatient` | Number of inpatient visits in the preceding year | Numerical |
-| `number_diagnoses` | Number of diagnoses entered to the system | Numerical |
+### 1. Patient Demographics & Identification
+| Column | Description | Type | Transformation |
+| :--- | :--- | :--- | :--- |
+| `encounter_id` | Unique identifier of an encounter | ID | None |
+| `patient_nbr` | Unique identifier of a patient | ID | None |
+| `race` | Patient's race | Categorical | Missing values imputed as 'Other' |
+| `gender` | Patient's gender | Categorical | 'Unknown/Invalid' records dropped |
+| `age` | Patient's age interval | **Numerical** | Recoded to bin midpoints (e.g., [40-50) -> 45) |
 
-## Medication & Treatment
-| Column | Description | Type |
-| :--- | :--- | :--- |
-| `change` | Indicates if there was a change in diabetic medications | Binary (Ch/No) |
-| `diabetesMed` | Indicates if any diabetic medication was prescribed | Binary (Yes/No) |
+### 2. Clinical Encounter Metrics
+| Column | Description | Type | Transformation |
+| :--- | :--- | :--- | :--- |
+| `admission_type_id` | Integer identifier for admission type | Discrete | None |
+| `discharge_disposition_id` | Integer identifier for discharge goal | Discrete | None |
+| `admission_source_id` | Integer identifier for admission source | Discrete | None |
+| `time_in_hospital` | Number of days in hospital | Numerical | None |
+| `num_lab_procedures` | No. of lab tests in encounter | Numerical | None |
+| `num_procedures` | No. of non-lab procedures | Numerical | None |
+| `num_medications` | No. of generic meds prescribed | Numerical | None |
+| `number_outpatient` | Outpatient visits in preceding year | Numerical | None |
+| `number_emergency` | Emergency visits in preceding year | Numerical | None |
+| `number_inpatient` | Inpatient visits in preceding year | Numerical | None |
+| `diag_1`, `diag_2`, `diag_3` | Primary, secondary, and tertiary diagnoses | ICD9 Codes | None |
+| `number_diagnoses` | Number of diagnosis entries | Numerical | None |
 
-## Target Variable
-| Column | Description | Type |
-| :--- | :--- | :--- |
-| **`readmission_30d`** | Whether the patient was readmitted within 30 days | Binary (1/0) |
+### 3. Medication & Management
+| Column | Description | Type | Transformation |
+| :--- | :--- | :--- | :--- |
+| `max_glu_serum` | Results of glucose serum test | Categorical | None |
+| `A1Cresult` | Results of A1C test | Categorical | None |
+| `change` | Indicates if there was a change in diabetic meds | Binary | None |
+| `diabetesMed` | Indicates if any diabetic medication was prescribed | Binary | None |
+
+### 4. Target Variables
+| Column | Description | Type | Transformation |
+| :--- | :--- | :--- | :--- |
+| **`readmit_30d`** | **Primary KPI Target** | **Binary** | Created from original `readmitted` (1 if <30 days, else 0) |
+
+## Dropped Columns (Low Quality/High Missingness)
+- `weight`: $>90\%$ missing.
+- `payer_code`: $>40\%$ missing / irrelevant for clinical prediction.
+- `medical_specialty`: $>40\%$ missing.
