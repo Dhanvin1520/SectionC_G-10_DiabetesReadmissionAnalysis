@@ -64,14 +64,29 @@ For the full implementation, see `notebooks/02_cleaning.ipynb` or run `python sc
 ## KPI Framework
 | KPI | Definition | Formula / Computation |
 | :--- | :--- | :--- |
-| **30-Day Readmission Rate (%)** | Percentage of patients readmitted within 30 days of discharge | `(Count of patients with readmitted = '<30') / (Total Admissions) * 100` |
-| **Average Length of Stay (Days)** | Average time patients spend in the hospital | `Average(time_in_hospital)` |
+| **30-Day Readmission Rate (%)** | Percentage of patients readmitted within 30 days of discharge | `(Count of patients with readmit_under_30 = 1) / (Total Admissions) * 100` |
+| **Average Length of Stay (Days)** | Average time patients spend in the hospital | `Average(Days in Hospital)` |
+| **High-Risk Segment Concentration** | Proportion of readmissions attributed to top-tier risk groups (e.g., Age 70+) | `(Readmissions in Segment) / (Total Readmissions) * 100` |
+| **Medication Change Impact Ratio** | Comparison of readmission rates between patients with vs. without treatment changes | `Correlation(Medication Changed, Readmission Status)` |
+| **Recurrence Multiplier** | Average prior inpatient visits for readmitted patients vs. stable patients | `Avg(Prior Inpatient Visits | Readmit=1) / Avg(Prior Inpatient Visits | Readmit=0)` |
 
-## Tableau Dashboard
-*Detailed Tableau link and screenshots will be added in Phase 2.*
-- **Dashboard URL**: [To be added]
-- **Executive View**: Summary of readmission rates across age groups and medical specialties.
-- **Operational View**: Detailed breakdown of length of stay vs. medication changes.
+## Tableau Dashboard Strategy
+*The dashboard suite is designed for cross-departmental decision support, localized at: [Tableau Public Profile](file:///tableau/dashboard_links.md)*
+
+### 1. Executive Readmission Cockpit
+**Goal**: Identify demographic and systemic risk disparities.
+- **Visuals**: Geodemographic heatmaps, Age-Risk bars, and Gender disparity ratios.
+- **Decision Value**: Helps administrators allocate resources to vulnerable demographic segments.
+
+### 2. Clinical Driver Analysis
+**Goal**: Discover the medical and pharmaceutical triggers of early return.
+- **Visuals**: Diagnosis Treemaps (ICD9 Groups), Medication Change impact scatter, and Lab Test density.
+- **Decision Value**: Enables clinical heads to refine discharge protocols based on disease-specific risk profiles.
+
+### 3. Operational Efficiency Tracker
+**Goal**: Optimize Length of Stay (LOS) and admission protocols.
+- **Visuals**: LOS vs. Readmission Line Chart, Admission Source Sankey, and Discharge Destination Bar.
+- **Decision Value**: Identifies "Sweet Spot" discharge windows to minimize ROI-killing readmissions.
 
 ## Repository Structure
 ```
