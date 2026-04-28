@@ -72,8 +72,8 @@ For the full implementation, see `notebooks/02_cleaning.ipynb` or run `python sc
 
 ### 🖥️ Dashboard Gallery
 | Executive Overview | Patient Risk Analysis |
-| :---: | :---: |
-| ![Dashboard 1](tableau/screenshots/dashboard_1.png) | ![Dashboard 2](tableau/screenshots/dashboard_2.png) |
+| :---: | :---: | :---: |
+| ![Dashboard 1](tableau/screenshots/dashboard_1.png) | ![Dashboard 2](tableau/screenshots/dashboard_2.png) | ![Dashboard 3](tableau/screenshots/dashboard_3.png)
 
 - **Executive View**: Summary of readmission rates across age groups and demographic disparities.
 - **Operational View**: Detailed breakdown of length of stay vs. medication changes and prior visits.
@@ -130,16 +130,16 @@ SectionC_G-10_DiabetesReadmissionAnalysis/
 - [x] All notebooks committed in `.ipynb` format
 - [x] `data/raw/` contains the original, unedited dataset
 - [ ] `data/processed/` contains the cleaned pipeline output
-- [ ] `tableau/screenshots/` contains dashboard screenshots
-- [ ] `tableau/dashboard_links.md` contains the Tableau Public URL
+- [x] `tableau/screenshots/` contains dashboard screenshots
+- [x] `tableau/dashboard_links.md` contains the Tableau Public URL
 - [ ] `docs/data_dictionary.md` is complete
 - [x] `README.md` explains the project, dataset, and team
 - [x] All members have visible commits and pull requests
 
 ### Tableau Dashboard
-- [ ] Published on Tableau Public and accessible via public URL
-- [ ] At least one interactive filter included
-- [ ] Dashboard directly addresses the business problem
+- [x] Published on Tableau Public and accessible via public URL
+- [x] At least one interactive filter included
+- [x] Dashboard directly addresses the business problem
 
 ### Project Report
 - [ ] Final report exported as PDF into `reports/`
