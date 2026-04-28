@@ -1,0 +1,21 @@
+medication,change_type,total_patients,readmit_rate_percent
+Metformin,Dose decreased,575,12.0
+Metformin,Dose increased,1067,8.2
+Metformin,Not prescribed,81776,11.5
+Metformin,Steady dose,18345,9.7
+Insulin,Dose decreased,12218,13.9
+Insulin,Dose increased,11316,13.0
+Insulin,Not prescribed,47380,10.0
+Insulin,Steady dose,30849,11.1
+Glipizide,Dose decreased,560,15.2
+Glipizide,Dose increased,770,12.9
+Glipizide,Not prescribed,89078,11.1
+Glipizide,Steady dose,11355,11.2
+Glyburide,Dose decreased,564,9.2
+Glyburide,Dose increased,812,10.5
+Glyburide,Not prescribed,91113,11.2
+Glyburide,Steady dose,9274,10.7
+Pioglitazone,Dose decreased,118,15.3
+Pioglitazone,Dose increased,234,12.4
+Pioglitazone,Not prescribed,94436,11.2
+Pioglitazone,Steady dose,6975,10.4
