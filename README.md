@@ -8,20 +8,19 @@ Newton School of Technology | Data Visualization & Analytics | Capstone 2
 | **Sector** | Healthcare |
 | **Team ID** | G-10 |
 | **Section** | C |
-| **Faculty Mentor** | To be assigned |
+| **Faculty Mentor** | Archit Raj |
 | **Institute** | Newton School of Technology |
-| **Submission Date** | April 28, 2026 |
+| **Submission Date** | April 29, 2026 |
 
 ## Team Members
 | Role | Name | GitHub Username |
 | :--- | :--- | :--- |
 | **Project Lead** | Dhanvin Vadlamudi | Dhanvin1520 |
-| **Data Lead** | Ayush Mittal | mittalayushh |
-| **ETL Lead** | GARGI SRIVASTAVA | gigibyte2024 |
-| **Analysis Lead** | tanish Garg | tnshgarg |
-| **Visualization Lead** | Sumit Yadav | sumit316-glitch |
-| **Strategy Lead** | Dhanvin Vadlamudi | Dhanvin1520 |
-| **PPT and Quality Lead** | LAKSHYA | Lakshyalamba |
+| **Tableau Architect** | Ayush Mittal | mittalayushh |
+| **Data Engineer** | GARGI SRIVASTAVA | gigibyte2024 |
+| **Statistical Analyst** | tanish Garg | tnshgarg |
+| **EDA Specialist** | Sumit Yadav | sumit316-glitch |
+| **Documentation & QA** | LAKSHYA | Lakshyalamba |
 
 ## Business Problem
 Diabetic patients represent a significant portion of hospital admissions, and readmission rates remain a critical challenge for healthcare providers. This project analyzes a decade of clinical data from 130 US hospitals to identify factors contributing to patient readmissions within 30 days. By identifying high-risk characteristics and treatment patterns, hospital administrators can optimize discharge planning and post-care strategies to improve patient outcomes and reduce healthcare costs.
@@ -71,13 +70,14 @@ For the full implementation, see `notebooks/02_cleaning.ipynb` or run `python sc
 *Decision support suite for hospital readmission risk management.*
 
 ### 🖥️ Dashboard Gallery
-| Executive Overview | Patient Risk Analysis |
+| Executive Overview | Patient Risk Analysis | Treatment & Outcomes |
 | :---: | :---: | :---: |
-| ![Dashboard 1](tableau/screenshots/dashboard_1.png) | ![Dashboard 2](tableau/screenshots/dashboard_2.png) | ![Dashboard 3](tableau/screenshots/dashboard-3.png)
+| ![Executive View](tableau/screenshots/dashboard-1.png) | ![Risk Analysis](tableau/screenshots/dashboard-2.png) | ![Treatment Analysis](tableau/screenshots/dashboard-3.png)
 
-- **Executive View**: Summary of readmission rates across age groups and demographic disparities.
-- **Operational View**: Detailed breakdown of length of stay vs. medication changes and prior visits.
-- **Dashboard URL**: [View on Tableau Public](tableau/dashboard_links.md)
+- **Executive View**: Tracks real-time 30-day readmission rates vs. age and race cohorts.
+- **Operational View**: Allows discharge planners to drill down into diagnosis-specific risk factors.
+- **Outcome Analysis**: Visualizes the correlation between medication changes and patient stability.
+- **Dashboard URL**: [Interactive Executive Overview](https://public.tableau.com/app/profile/ayush.mittal4873/viz/DVACapstoneDiabetesReadmissionAnalysis_v2025_3/Dashboard_Executive_Overview?publish=yes)
 
 ## Repository Structure
 ```
@@ -159,14 +159,14 @@ SectionC_G-10_DiabetesReadmissionAnalysis/
 - [ ] Portfolio link or project case study added
 
 ## Contribution Matrix
-| Team Member | Dataset & Sourcing | ETL & Cleaning | EDA & Analysis | Statistical Analysis | Tableau Dashboard | Report Writing | PPT & Viva |
+| Team Member | Dataset | ETL | EDA | Stats | Tableau | Report | PPT |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Dhanvin Vadlamudi** | Support | Support | Support | Support | Support | Owner | Owner |
-| **Ayush Mittal** | Owner | Support | Support | Support | Support | Support | Support |
-| **GARGI SRIVASTAVA** | Support | Owner | Support | Support | Support | Support | Support |
-| **tanish Garg** | Support | Support | Owner | Owner | Support | Support | Support |
-| **Sumit Yadav** | Support | Support | Support | Support | Owner | Support | Support |
-| **LAKSHYA** | Support | Support | Support | Support | Support | Support | Owner |
+| **Dhanvin Vadlamudi** | \checkmark | \checkmark | \checkmark | \checkmark | | \checkmark | \checkmark |
+| **Ayush Mittal** | \checkmark | \checkmark | | | \checkmark | | |
+| **GARGI SRIVASTAVA** | \checkmark | | | | \checkmark | | |
+| **tanish Garg** | \checkmark | | | | \checkmark | | |
+| **Sumit Yadav** | \checkmark | | | | | \checkmark | |
+| **LAKSHYA** | \checkmark | | | | | | \checkmark |
 
 **Declaration:** We confirm that the above contribution details are accurate and verifiable through GitHub Insights, PR history, and submitted artifacts.
 
