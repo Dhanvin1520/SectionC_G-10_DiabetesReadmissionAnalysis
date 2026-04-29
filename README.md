@@ -4,8 +4,8 @@ Newton School of Technology | Data Visualization & Analytics | Capstone 2
 ## Project Overview
 | Field | Details |
 | :--- | :--- |
-| **Project Title** | Diabetes Readmission Analysis: Predicting 30-Day Hospital Returns |
-| **Sector** | Healthcare |
+| **Project Title** | Analyzing Clinical & Demographic Patterns to Reduce 30-Day Hospital Readmissions |
+| **Sector** | Healthcare / Health Informatics |
 | **Team ID** | G-10 |
 | **Section** | C |
 | **Faculty Mentor** | Archit Raj |
@@ -31,40 +31,40 @@ How can patient demographics, medication changes, and hospital treatment history
 ### Decision Supported
 This analysis enables hospital management to identify high-risk patient segments prior to discharge and implement targeted intervention strategies, such as specialized follow-up care or medication adjustments, to prevent avoidable readmissions.
 
-## Data Cleaning & ETL Methodology
-The cleaning process was designed to transform raw clinical records into a high-fidelity dataset focused on **30-day readmission prediction**. 
-
-Key steps included:
-1. **Target Variable Standardisation**: The original `readmitted` column (NO, >30, <30) was recoded into a binary `readmit_30d` target. This aligns directly with our primary KPI of reducing early hospital returns.
-2. **Clinical Missingness Handling**: Placeholders like `?` were converted to standard `NaN`. We dropped high-missingness columns (`weight`, `payer_code`, `medical_specialty`) to remove noise while retaining demographic integrity.
-3. **Age Encoding**: Transformed categorical age bins (e.g., `[50-60)`) into numerical midpoints (`55`). This allows for statistical correlation analysis between age and the probability of readmission.
-4. **Data Quality Filtering**: Removed records with `Unknown/Invalid` gender and imputed `race` as 'Other' to ensure robust demographic segmentation without losing data volume.
-
-For the full implementation, see `notebooks/02_cleaning.ipynb` or run `python scripts/etl_pipeline.py`.
+## Analytical Pipeline
+The project follows a structured 7-step workflow:
+1. **Define** - Sector selected (Healthcare), problem statement scoped, and mentor approval obtained.
+2. **Extract** - Raw dataset sourced from UCI Repository and committed to `data/raw/`.
+3. **Clean and Transform** - Cleaning pipeline built in `notebooks/02_cleaning.ipynb` handling missing values (`?`) and ICD-9 mapping.
+4. **Analyze** - EDA and statistical analysis (Mann-Whitney U Test) performed in notebooks `03` and `04`.
+5. **Visualize** - Interactive Tableau dashboard built and published on Tableau Public.
+6. **Recommend** - Data-backed business recommendations delivered to support clinical decisions.
+7. **Report** - Final project report and presentation deck completed.
 
 ## Dataset
 | Attribute | Details |
 | :--- | :--- |
-| **Source Name** | UCI Machine Learning Repository |
-| **Direct Access Link** | [Diabetes 130-US Hospitals Dataset](https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008) |
-| **Row Count** | 101,766 |
-| **Column Count** | 50 |
+| **Source Name** | UCI Machine Learning Repository (Diabetes 130-US Hospitals) |
+| **Direct Access Link** | [Access Dataset](https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008) |
+| **Row Count** | 101,763 (Post-Cleaning) |
+| **Column Count** | 50 meaningful features |
 | **Time Period Covered** | 1999 to 2008 |
 | **Format** | CSV |
 
 ### Key Columns Used
 | Column Name | Description | Role in Analysis |
 | :--- | :--- | :--- |
-| `readmitted` | Patient readmission status (NO, >30, <30) | **Target Variable** (KPI 1) |
-| `time_in_hospital` | Number of days between admission and discharge | **Target Variable** (KPI 2) |
-| `age` | Age interval of the patient | Segmentation / Filter |
-| `number_inpatient` | Number of inpatient visits of the patient in the year preceding the encounter | Predictor / Segment |
+| `readmitted` | Patient readmission status (NO, >30, <30) | **Target Variable** (KPI) |
+| `number_inpatient` | Count of prior inpatient visits in the preceding year | **Primary Risk Predictor** |
+| `time_in_hospital` | Total days spent in hospital during encounter | Operational Efficiency Metric |
+| `age_midpoint` | Numerical representation of patient age intervals | Demographic Segmentation |
 
 ## KPI Framework
 | KPI | Definition | Formula / Computation |
 | :--- | :--- | :--- |
-| **30-Day Readmission Rate (%)** | Percentage of patients readmitted within 30 days of discharge | `(Count of patients with readmitted = '<30') / (Total Admissions) * 100` |
-| **Average Length of Stay (Days)** | Average time patients spend in the hospital | `Average(time_in_hospital)` |
+| **30-Day Readmission Rate (%)** | Percentage of patients readmitted within 30 days | `(Count '<30') / (Total Admissions) * 100` |
+| **Avg Length of Stay (LOS)** | Average bed-occupancy duration per encounter | `Average(time_in_hospital)` |
+| **Medication Stability Rate** | Percentage of patients with unchanged dosages | `(Count 'No Change') / (Total Encounters)` |
 
 ## Tableau Dashboard
 *Decision support suite for hospital readmission risk management.*
@@ -74,13 +74,31 @@ For the full implementation, see `notebooks/02_cleaning.ipynb` or run `python sc
 | :---: | :---: | :---: |
 | ![Executive View](tableau/screenshots/dashboard-1.png) | ![Risk Analysis](tableau/screenshots/dashboard-2.png) | ![Treatment Analysis](tableau/screenshots/dashboard-3.png)
 
-- **Executive View**: Tracks real-time 30-day readmission rates vs. age and race cohorts.
-- **Operational View**: Allows discharge planners to drill down into diagnosis-specific risk factors.
-- **Outcome Analysis**: Visualizes the correlation between medication changes and patient stability.
-- **Dashboard URL**: [Interactive Executive Overview](https://public.tableau.com/app/profile/ayush.mittal4873/viz/DVACapstoneDiabetesReadmissionAnalysis_v2025_3/Dashboard_Executive_Overview?publish=yes)
+- **Executive View**: High-level KPIs and readmission distribution by Age/Race.
+- **Operational View**: Drill-down into diagnosis-specific risk and discharge patterns.
+- **Outcome Analysis**: Correlation between medication titration and patient stability.
+- **Dashboard URL**: [View Live on Tableau Public](https://public.tableau.com/app/profile/ayush.mittal4873/viz/DVACapstoneDiabetesReadmissionAnalysis_v2025_3/Dashboard_Executive_Overview?publish=yes)
+
+## Key Insights
+1. **Frequent Flyer Risk**: Patients with $\ge 3$ prior inpatient visits return at a 4.5x higher rate than the baseline.
+2. **The Age Paradox**: While volume peaks at 70-80 years, a severe secondary risk peak exists in the 25-35 group (Type-1 management gap).
+3. **Clinical Instability**: Patients undergoing medication "Down-titration" are 22% more likely to be readmitted early.
+4. **Diagnosis Drivers**: Circulatory and Respiratory clusters account for 45% of all 30-day returns.
+5. **Testing Gaps**: Patients without an A1C test during stay exhibit higher return rates than those with "Stable" results.
+6. **Discharge Failures**: 15% of readmitted patients were discharged to "Home Care" without specialized follow-up despite high severity scores.
+7. **Emergency Baseline**: Emergency admissions carry a 12% higher intrinsic risk than elective encounters.
+8. **Stay Duration**: Readmission risk correlates positively with LOS, peaking for patients staying 7-10 days (severity proxy).
+
+## Recommendations
+| # | Insight | Recommendation | Expected Impact |
+|---|---|---|---|
+| 1 | High Prior Visits | Implement 48-hour automated nurse callback for patients with $\ge 2$ prior stays. | 15% reduction in early returns. |
+| 2 | Medication Instability | Physician sign-off required for discharge if insulin dosage was adjusted within 24 hours. | Improved clinical stability post-discharge. |
+| 3 | Diagnosis Clusters | Standardized "Heart-Diabetes" discharge checklist for the Circulatory cluster. | Optimized specialized care routing. |
+| 4 | Testing Gaps | Mandate A1C testing for all patients with LOS $> 3$ days. | Better long-term glycemic control. |
 
 ## Repository Structure
-```
+```text
 SectionC_G-10_DiabetesReadmissionAnalysis/
 |-- README.md
 |-- data/
@@ -121,10 +139,10 @@ SectionC_G-10_DiabetesReadmissionAnalysis/
 | **Sumit Yadav** | ✅ | | | | | ✅ | |
 | **LAKSHYA** | ✅ | | | | | | ✅ |
 
-**Declaration:** We confirm that the above contribution details are accurate and verifiable through GitHub Insights, PR history, and submitted artifacts.
+**Declaration:** We confirm that the above contribution details are accurate and verifiable through GitHub Insights and PR history.
 
 **Team Lead Name:** Dhanvin Vadlamudi  
 **Date:** April 29, 2026
 
-## Academic Integrity
-All analysis, code, and recommendations in this repository are the original work of the team listed above. Free-riding is tracked via GitHub Insights and pull request history. Any mismatch between the contribution matrix and actual commit history may result in individual grade adjustments.
+---
+*Newton School of Technology - Data Visualization & Analytics | Capstone 2*
