@@ -4,8 +4,8 @@ Newton School of Technology | Data Visualization & Analytics | Capstone 2
 ## Project Overview
 | Field | Details |
 | :--- | :--- |
-| **Project Title** | Analyzing Clinical & Demographic Patterns to Reduce 30-Day Hospital Readmissions |
-| **Sector** | Healthcare / Health Informatics |
+| **Project Title** | Diabetes Readmission Analysis: Predicting 30-Day Hospital Returns |
+| **Sector** | Healthcare |
 | **Team ID** | G-10 |
 | **Section** | C |
 | **Faculty Mentor** | Archit Raj |
@@ -46,7 +46,7 @@ The project follows a structured 7-step workflow:
 | :--- | :--- |
 | **Source Name** | UCI Machine Learning Repository (Diabetes 130-US Hospitals) |
 | **Direct Access Link** | [Access Dataset](https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008) |
-| **Row Count** | 101,763 (Post-Cleaning) |
+| **Row Count** | 101,763  |
 | **Column Count** | 50 meaningful features |
 | **Time Period Covered** | 1999 to 2008 |
 | **Format** | CSV |
@@ -101,6 +101,7 @@ The project follows a structured 7-step workflow:
 ```text
 SectionC_G-10_DiabetesReadmissionAnalysis/
 |-- README.md
+|-- requirements.txt              # Project dependencies
 |-- data/
 |   |-- raw/                         # Original dataset (diabetic_data.csv)
 |   `-- processed/                   # Cleaned output from ETL pipeline
@@ -113,12 +114,14 @@ SectionC_G-10_DiabetesReadmissionAnalysis/
 |-- scripts/
 |   `-- etl_pipeline.py
 |-- tableau/
-|   |-- screenshots/                 # Key dashboard views
+|   |-- screenshots/                 # dashboard-1.png, dashboard-2.png, etc.
 |   `-- dashboard_links.md           # Interactive dashboard URL
-|-- reports/                         # Final deliverables (PDF/LaTeX)
+|-- reports/
+|   |-- Diabetes-Readmission-G10-Final.pdf   # Main Project Deliverable
+|   `-- G_10_report.pdf                      # Technical Appendix
 |-- docs/
 |   `-- data_dictionary.md           # Dataset schema and column definitions
-|-- DVA-oriented-Resume/             # Team career assets
+|-- DVA-oriented-Resume/             # Team resumes and career assets
 `-- DVA-focused-Portfolio/            # Project showcase links
 ```
 
