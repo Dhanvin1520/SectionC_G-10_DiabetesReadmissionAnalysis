@@ -159,7 +159,7 @@ SectionC_G-10_DiabetesReadmissionAnalysis/
 - [ ] Portfolio link or project case study added
 
 ## Contribution Matrix
-| Team Member | Dataset & Sourcing | ETL & Cleaning | EDA & Analysis | Statistical Analysis | Tableau Dashboard | Report Writing | PPT & Viva |
+| Team Member | Dataset | ETL | EDA | Stats | Tableau | Report | PPT |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Dhanvin Vadlamudi** | \checkmark | \checkmark | \checkmark | \checkmark | | \checkmark | \checkmark |
 | **Ayush Mittal** | \checkmark | \checkmark | | | \checkmark | | |
