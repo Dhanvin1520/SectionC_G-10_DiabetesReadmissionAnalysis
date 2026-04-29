@@ -160,18 +160,18 @@ SectionC_G-10_DiabetesReadmissionAnalysis/
 
 ## Contribution Matrix
 | Team Member | Dataset | ETL | EDA | Stats | Tableau | Report | PPT |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Dhanvin Vadlamudi** | \checkmark | \checkmark | \checkmark | \checkmark | | \checkmark | \checkmark |
-| **Ayush Mittal** | \checkmark | \checkmark | | | \checkmark | | |
-| **GARGI SRIVASTAVA** | \checkmark | | | | \checkmark | | |
-| **tanish Garg** | \checkmark | | | | \checkmark | | |
-| **Sumit Yadav** | \checkmark | | | | | \checkmark | |
-| **LAKSHYA** | \checkmark | | | | | | \checkmark |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Dhanvin Vadlamudi** | ✅ | ✅ | ✅ | ✅ | | ✅ | ✅ |
+| **Ayush Mittal** | ✅ | ✅ | | | ✅ | | |
+| **GARGI SRIVASTAVA** | ✅ | | | | ✅ | | |
+| **tanish Garg** | ✅ | | | | ✅ | | |
+| **Sumit Yadav** | ✅ | | | | | ✅ | |
+| **LAKSHYA** | ✅ | | | | | | ✅ |
 
 **Declaration:** We confirm that the above contribution details are accurate and verifiable through GitHub Insights, PR history, and submitted artifacts.
 
 **Team Lead Name:** Dhanvin Vadlamudi  
-**Date:** April 16, 2026
+**Date:** April 29, 2026
 
 ## Academic Integrity
 All analysis, code, and recommendations in this repository are the original work of the team listed above. Free-riding is tracked via GitHub Insights and pull request history. Any mismatch between the contribution matrix and actual commit history may result in individual grade adjustments.
