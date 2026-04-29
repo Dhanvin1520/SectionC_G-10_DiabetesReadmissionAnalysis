@@ -73,7 +73,7 @@ For the full implementation, see `notebooks/02_cleaning.ipynb` or run `python sc
 ### 🖥️ Dashboard Gallery
 | Executive Overview | Patient Risk Analysis |
 | :---: | :---: | :---: |
-| ![Dashboard 1](tableau/screenshots/dashboard-1.png) | ![Dashboard 2](tableau/screenshots/dashboard-2.png) | ![Dashboard 3](tableau/screenshots/dashboard_3.png)
+| ![Dashboard 1](tableau/screenshots/dashboard_1.png) | ![Dashboard 2](tableau/screenshots/dashboard_2.png) | ![Dashboard 3](tableau/screenshots/dashboard-3.png)
 
 - **Executive View**: Summary of readmission rates across age groups and demographic disparities.
 - **Operational View**: Detailed breakdown of length of stay vs. medication changes and prior visits.
