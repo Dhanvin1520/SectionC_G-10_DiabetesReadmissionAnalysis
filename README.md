@@ -95,15 +95,13 @@ SectionC_G-10_DiabetesReadmissionAnalysis/
 |-- scripts/
 |   `-- etl_pipeline.py
 |-- tableau/
-|   |-- screenshots/
-|   `-- dashboard_links.md
-|-- reports/
-|   |-- project_report_template.md
-|   `-- presentation_outline.md
+|   |-- screenshots/                 # Key dashboard views
+|   `-- dashboard_links.md           # Interactive dashboard URL
+|-- reports/                         # Final deliverables (PDF/LaTeX)
 |-- docs/
-|   `-- data_dictionary.md
-|-- DVA-oriented-Resume/
-`-- DVA-focused-Portfolio/
+|   `-- data_dictionary.md           # Dataset schema and column definitions
+|-- DVA-oriented-Resume/             # Team career assets
+`-- DVA-focused-Portfolio/            # Project showcase links
 ```
 
 ## Tech Stack
@@ -112,51 +110,6 @@ SectionC_G-10_DiabetesReadmissionAnalysis/
 | **Python** | ETL, Cleaning, and Statistical Analysis |
 | **Tableau Public** | Dashboard design and visualization |
 | **GitHub** | Version control and collaboration |
-
-## Evaluation Rubric
-| Area | Marks | Focus |
-| :--- | :--- | :--- |
-| **Problem Framing** | 10 | Is the business question clear and well-scoped? |
-| **Data Quality and ETL** | 15 | Is the cleaning pipeline thorough and documented? |
-| **Analysis Depth** | 25 | Are statistical methods applied correctly with insight? |
-| **Dashboard and Visualization** | 20 | Is the Tableau dashboard interactive and decision-relevant? |
-| **Business Recommendations** | 20 | Are insights actionable and well-reasoned? |
-| **Storytelling and Clarity** | 10 | Is the presentation professional and coherent? |
-| **Total** | **100** | |
-
-## Submission Checklist
-### GitHub Repository
-- [x] Public repository created with the correct naming convention (`SectionName_TeamID_ProjectName`)
-- [x] All notebooks committed in `.ipynb` format
-- [x] `data/raw/` contains the original, unedited dataset
-- [ ] `data/processed/` contains the cleaned pipeline output
-- [x] `tableau/screenshots/` contains dashboard screenshots
-- [x] `tableau/dashboard_links.md` contains the Tableau Public URL
-- [ ] `docs/data_dictionary.md` is complete
-- [x] `README.md` explains the project, dataset, and team
-- [x] All members have visible commits and pull requests
-
-### Tableau Dashboard
-- [x] Published on Tableau Public and accessible via public URL
-- [x] At least one interactive filter included
-- [x] Dashboard directly addresses the business problem
-
-### Project Report
-- [ ] Final report exported as PDF into `reports/`
-- [ ] Cover page, executive summary, sector context, problem statement
-- [ ] Data description, cleaning methodology, KPI framework
-- [ ] EDA with written insights, statistical analysis results
-- [ ] Dashboard screenshots and explanation
-- [ ] 8-12 key insights in decision language
-- [ ] 3-5 actionable recommendations with impact estimates
-
-### Presentation Deck
-- [ ] Final presentation exported as PDF into `reports/`
-- [ ] Title slide through recommendations, impact, limitations, and next steps
-
-### Individual Assets
-- [ ] DVA-oriented resume updated to include this capstone
-- [ ] Portfolio link or project case study added
 
 ## Contribution Matrix
 | Team Member | Dataset | ETL | EDA | Stats | Tableau | Report | PPT |
