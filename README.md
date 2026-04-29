@@ -103,8 +103,11 @@ SectionC_G-10_DiabetesReadmissionAnalysis/
 |-- README.md
 |-- requirements.txt              # Project dependencies
 |-- data/
-|   |-- raw/                         # Original dataset (diabetic_data.csv)
-|   `-- processed/                   # Cleaned output from ETL pipeline
+|   |-- raw/
+|   |   `-- diabetic_data.csv        # Original UCI dataset
+|   `-- processed/
+|       |-- cleaned_diabetic_data.csv # Final pipeline output
+|       `-- summary/                  # Aggregate risk summaries
 |-- notebooks/
 |   |-- 01_extraction.ipynb
 |   |-- 02_cleaning.ipynb
@@ -112,15 +115,16 @@ SectionC_G-10_DiabetesReadmissionAnalysis/
 |   |-- 04_statistical_analysis.ipynb
 |   `-- 05_final_load_prep.ipynb
 |-- scripts/
-|   `-- etl_pipeline.py
+|   |-- __init__.py
+|   `-- etl_pipeline.py              # Automated data cleaning script
 |-- tableau/
-|   |-- screenshots/                 # dashboard-1.png, dashboard-2.png, etc.
+|   |-- screenshots/                 # dashboard-1.png, dashboard-2.png, dashboard-3.png
 |   `-- dashboard_links.md           # Interactive dashboard URL
 |-- reports/
 |   |-- Diabetes-Readmission-G10-Final.pdf   # Main Project Deliverable
 |   `-- G_10_report.pdf                      # Technical Appendix
 |-- docs/
-|   `-- data_dictionary.md           # Dataset schema and column definitions
+|   `-- data_dictionary.md           # Dataset schema and definitions
 |-- DVA-oriented-Resume/             # Team resumes and career assets
 `-- DVA-focused-Portfolio/            # Project showcase links
 ```
