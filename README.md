@@ -13,14 +13,14 @@ Newton School of Technology | Data Visualization & Analytics | Capstone 2
 | **Submission Date** | April 29, 2026 |
 
 ## Team Members
-| Role | Name | GitHub Username |
-| :--- | :--- | :--- |
-| **Project Lead** | Dhanvin Vadlamudi | Dhanvin1520 |
-| **Tableau Architect** | Ayush Mittal | mittalayushh |
-| **Data Engineer** | GARGI SRIVASTAVA | gigibyte2024 |
-| **Statistical Analyst** | tanish Garg | tnshgarg |
-| **EDA Specialist** | Sumit Yadav | sumit316-glitch |
-| **Documentation & QA** | LAKSHYA | Lakshyalamba |
+| Name | GitHub Username |
+| :--- | :--- |
+| Dhanvin Vadlamudi | Dhanvin1520 |
+| Ayush Mittal | mittalayushh |
+| GARGI SRIVASTAVA | gigibyte2024 |
+| tanish Garg | tnshgarg |
+| Sumit Yadav | sumit316-glitch |
+| LAKSHYA | Lakshyalamba |
 
 ## Business Problem
 Diabetic patients represent a significant portion of hospital admissions, and readmission rates remain a critical challenge for healthcare providers. This project analyzes a decade of clinical data from 130 US hospitals to identify factors contributing to patient readmissions within 30 days. By identifying high-risk characteristics and treatment patterns, hospital administrators can optimize discharge planning and post-care strategies to improve patient outcomes and reduce healthcare costs.
